@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+  <html> 
+    <head>
+      <meta charset="utf-8">
+      <title>Character Select</title>
+
+      <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     
+     <!--Project Css -->
+      <link rel="stylesheet" type="text/css" href="class_select.css">
+    </head>
+    
+    <body>
+
+     <div class="container-fluid">
+       <div class="background-color">
+         <div class="row">
+           <div class="jumbotron text-center">
+             <h1 id="home">Select Your Class</h1>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- This project was less about design and more proof of concept for myself. I wanted to see if I could, through jQuery and CSS, show and hide elements with information that also have a sub-set of elements of information. I started off with a lot of jQuery but with some help I've been able to dry it out. I must admit styling fall to th wayside of trying to accomplish the effects I wanted.-->
+
+     <div class="container-fluid">
+       <div class="background-color">
+       <!--Class Selection-->
+         <div class="row">
+           <ul class="class-list list-unstyled col-xs-12 col-sm-12 col-md-12">
+             <li  id="fighter" data-target="fighter-info" class="class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 hover">
+               <span class="glyphicon glyphicon-wrench text-center col-xs-12"></span>
+               <h3 class="text-center">Fighter</h3>
+               <p>Skilled in all weapons and armor, and never afraid of overwhelming odds.</p>
+             </li>
+             <li id="wizard" data-target="wizard-info" class="class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 hover">
+               <span class="glyphicon glyphicon-fire text-center col-xs-12"></span>
+               <h3 class="text-center"> Wizard</h3>
+               <p>Uses mystic forces to alter the world around them.  great friend and a terrible enemy.</p>
+             </li>
+             <li id="rouge" data-target="rouge-info"  class="class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 hover">
+               <span class="glyphicon glyphicon-pushpin text-center col-xs-12"></span>
+               <h3 class="text-center">Rouge</h3>
+               <p>Backstabber is a compliment. The shadows are family and treachery is your best friend.</p>
+             </li>
+           </ul>
+         </div>
+         <!-- Fighter Class-->
+         <div id="fighter-info" class="class-info">
+           <div class="row text-center"> 
+             <h2>Fighter Class </h2>
+           </div>
+           <div class="row rowBackground">
+             <div class="col-xs-12 col-sm-12 col-md-12">
+               <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                 <h4 class="text-center">Fighter Base Stats</h4>
+                 <div class="col-xs-6">
+                   <p><b>Strength</b> 17</p>
+                   <p><b>Dexterity</b> 15</p>
+                   <p><b>Intelligence</b> 11</p>
+                 </div>
+                 <div class="col-xs-6">
+                   <p><b>Wisdom</b> 10</p>
+                   <p><b>Constitution</b> 16</p>
+                   <p><b>Charisma</b> 12</p>
+                 </div>
+               </div>
+               <div class="col-xs-12 col-sm-8 col-md-8">
+                 <h4>Fighter Background</h4>
+                 <p>A fighter is equal parts offensive and defensive. Spending years of their lives training will every weapon and armor in the kingdoms, they are a versatile combat machine. Weather it be swinging a great Axe for maximum carnage, wearing the thickest plate armor available, or picking off enemies from a distance; A Fighter is always deadly in combat.</p>
+               </div>
+             </div>  
+           </div>
+           <!--Fighter Subclasses -->
+           <div class="row text-center"> 
+             <h3 class="sub-header">Fighter Sub-Classes</h3>
+           </div>
+           <div class="row">  
+             <ul class="sub-class-list list-unstyled col-xs-12 col-sm-12 col-md-12">
+               <li id="berserker" data-target="berserker-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4  text-center hover">
+                 <span class="glyphicon glyphicon-user text-center col-xs-12"></span>
+                 <h3 class="text-center">Berserker</h3>
+                 <p>A harbinger for physical destruction. What is a cut to you when your enemy is split in twane</p>
+               </li>
+               <li id="tortuga" data-target="tortuga-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4  text-center hover">
+                 <span class="glyphicon glyphicon-tower text-center col-xs-12"></span>
+                 <h3 class="text-center">Tortuga</h3>
+                 <p>Heavy plated armor makes you a walking fortress. Every the strongest enemies struggle to harm you.</p>
+               </li>
+               <li id="ranger" data-target="ranger-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 text-center hover">
+                 <span class="glyphicon glyphicon-grain text-center col-xs-12"></span>
+                 <h3 class="text-center">Ranger</h3>
+                 <p>It doesn't matter how long a sword is if the wielder is filled with arrows from 200 yards.</p>
+               </li>
+             </ul>
+           </div>
+           <!--Berserker-->
+           <div id="berserker-info" class="sub-class-info">
+            <div class="row text-center"> 
+             <h3>Berserker Sub-Class</h3>
+           </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Berserker Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> +3</p>
+                     <p><b>Dexterity</b> -1</p>
+                     <p><b>Intelligence</b> -2</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> -2</p>
+                     <p><b>Constitution</b> +2</p>
+                     <p><b>Charisma</b> -1</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Berserker Background</h4>
+                   <p>Years in nature have deemed you worthy of controlling it with nothing more than your words and mind. You've seen the most ancient relics the natural world has to offer and it changed you. It became part of you. Fire comes at a snap of your fingers, water at the sound of your voice.</p>
+                 </div>
+               </div> 
+             </div>
+             <div class="spacer">  </div>
+           </div>
+           <!--Tortuga-->
+           <div id="tortuga-info" class="sub-class-info">
+            <div class="row text-center"> 
+             <h3>Tortuga Sub-Class</h3>
+           </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Tortuga Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> +2</p>
+                     <p><b>Dexterity</b> -2</p>
+                     <p><b>Intelligence</b> +0</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> +1</p>
+                     <p><b>Constitution</b> +2</p>
+                     <p><b>Charisma</b> +1</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Tortuga Background</h4>
+                   <p>Power calls to you. The source of this power means nothing. Promises of absolute power of life and death have driven you to find ancient crypts and tomes the ancients tried to hid away. The dead come at your call and even a healthy person will rot at your command</p>
+                 </div>
+               </div>  
+             </div>
+             <div class="spacer">  </div>
+           </div>
+           <!--Ranger-->
+           <div id="ranger-info" class="sub-class-info">
+             <div class="row text-center"> 
+               <h3>Ranger Sub-Class</h3>
+             </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Ranger Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> -2</p>
+                     <p><b>Dexterity</b> +2</p>
+                     <p><b>Intelligence</b> +2</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> +2</p>
+                     <p><b>Constitution</b> -2</p>
+                     <p><b>Charisma</b> +0</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Ranger Background</h4>
+                   <p>Years of devotion to your gods have lend you their ability to alter their world. Charged with using this ability for good, you're able to cure disease and heal the body. Flesh wounds close at your touch and your arrival in any town is herald by all that see you. </p>
+                 </div>
+               </div>  
+             </div>
+             <div class="spacer">  </div> 
+           </div> 
+         </div>  
+         <!-- Wizard Class-->
+         <div id="wizard-info" class="class-info">
+          <div class="row text-center"> 
+             <h2>Wizard Class</h2>
+           </div> 
+           <div class="row rowBackground">
+             <div  class= "col-xs-12 col-sm-12 col-md-12">
+               <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                 <h4 class="text-center">Wizard Base Stats</h4>
+                 <div class="col-xs-6">
+                   <p><b>Strength</b> 10</p>
+                   <p><b>Dexterity</b> 13</p>
+                   <p><b>Intelligence</b> 17</p>
+                 </div>
+                 <div class="col-xs-6">
+                   <p><b>Wisdom</b> 16</p>
+                   <p><b>Constitution</b> 11</p>
+                   <p><b>Charisma</b> 13</p>
+                 </div>
+               </div>
+               <div class="col-xs-12 col-sm-8 col-md-8">
+                 <h4>Wizard Background</h4>
+                 <p>Wizards control the elements in ways most individuals dream of. Lifetimes worth of research and study have been placed in old times found in keeps, or banished in safes. Wizards stand on the backs of those who came before them wielding the elements to destroy their enemies in a rain of fire, they alter the fabric of reality and perception, or they use divine blessings and heal those in need.</p>
+               </div>
+             </div>  
+           </div>
+           <!--Wizard Subclasses-->
+            <div class="row text-center"> 
+             <h3 class="sub-header">Wizard Sub-Classes</h3>
+           </div>
+           <div class="row">  
+             <ul class="sub-class-list list-unstyled col-xs-12 col-sm-12 col-md-12">
+               <li id="elemental" data-target="elemental-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 text-center hover">
+                 <span class="glyphicon glyphicon-flash text-center col-xs-12"></span>
+                 <h3 class="text-center">Elemental</h3>
+                 <p>The laws of nature do no restrict you. You, in fact, can control them to devastating effect</p>
+               </li>
+               <li id="death-wizard" data-target="death-wizard-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 text-center hover">
+                 <span class="glyphicon glyphicon-eye-open text-center col-xs-12"></span>
+                 <h3 class="text-center">Death Wizard</h3>
+                 <p>Death means nothing to you but you can mark sure your enemies know it's true horrors.</p>
+               </li>
+               <li id="cleric" data-target="cleric-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 text-center hover">
+                 <span class="glyphicon glyphicon-plus-sign text-center col-xs-12"></span>
+                 <h3 class="text-center">Cleric</h3>
+                 <p>The God's have blessed you with the ability to heal and cure diseases. </p>
+               </li>
+             </ul>
+           </div>
+           <!--Elemental-->
+           <div id="elemental-info" class="sub-class-info">
+            <div class="row text-center"> 
+             <h3>Elemental Sub-Class</h3>
+           </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Elemental Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> +1</p>
+                     <p><b>Dexterity</b> -1</p>
+                     <p><b>Intelligence</b> +2</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> +2</p>
+                     <p><b>Constitution</b> -2</p>
+                     <p><b>Charisma</b> +0</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Elemental Background</h4>
+                   <p>Years in nature have deemed you worthy of controlling it with nothing more than your words and mind. You've seen the most ancient relics the natural world has to offer and it changed you. It became part of you. Fire comes at a snap of your fingers, water at the sound of your voice.</p>
+                 </div>
+               </div>  
+             </div>
+             <div class="spacer">  </div>
+           </div>
+           <!--Death Wizard-->
+           <div id="death-wizard-info" class="sub-class-info">
+             <div class="row text-center"> 
+               <h3>Death-Wizard Sub-Class</h3>
+             </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Death Wizard Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> -3</p>
+                     <p><b>Dexterity</b> -2</p>
+                     <p><b>Intelligence</b> +3</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> +1</p>
+                     <p><b>Constitution</b> +1</p>
+                     <p><b>Charisma</b> +1</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Death Wizard Background</h4>
+                   <p>Power calls to you. The source of this power means nothing. Promises of absolute power of life and death have driven you to find ancient crypts and tomes the ancients tried to hid away. The dead come at your call and even a healthy person will rot at your command</p>
+                 </div>
+               </div>  
+             </div>
+             <div class="spacer">  </div>
+           </div>
+           <!--Cleric-->
+           <div id="cleric-info" class="sub-class-info">
+             <div class="row text-center"> 
+               <h3>Cleric Sub-Class</h3>
+             </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Cleric Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> -1</p>
+                     <p><b>Dexterity</b> -2</p>
+                     <p><b>Intelligence</b> +2</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> +2</p>
+                     <p><b>Constitution</b> +1</p>
+                     <p><b>Charisma</b> +0</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Cleric Background</h4>
+                   <p>Years of devotion to your gods have lend you their ability to alter their world. Charged with using this ability for good, you're able to cure disease and heal the body. Flesh wounds close at your touch and your arrival in any town is herald by all that see you. </p>
+                 </div>
+               </div>  
+             </div>
+             <div class="spacer">  </div> 
+           </div> 
+          </div> 
+         <!-- Rouge Class-->
+         <div id="rouge-info" class="class-info"> 
+          <div class="row text-center"> 
+             <h2>Rouge Class</h2>
+           </div>
+           <div class="row rowBackground">
+             <div  class="col-xs-12 col-sm-12 col-md-12">
+               <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                 <h4 class="text-center">Rouge Base Stats</h4>
+                 <div class="col-xs-6">
+                   <p><b>Strength</b> 12</p>
+                   <p><b>Dexterity</b> 17</p>
+                   <p><b>Intelligence</b> 10</p>
+                 </div>
+                 <div class="col-xs-6">
+                   <p><b>Wisdom</b> 15</p>
+                   <p><b>Constitution</b> 14</p>
+                   <p><b>Charisma</b> 16</p>
+                 </div>
+               </div>
+               <div class="col-xs-12 col-sm-8 col-md-8">
+                 <h4>Rouge Background</h4>
+                 <p>Rouges oft grew up in the streets with no education besides what hunger, crime, and poverty could teach. Adapt at becoming one with the shadows and knowing how to fell a stronger opponent without them ever seeing. Rouges can either talk circles around most individuals, getting what they want, and when that doesn't work a knife in the back usually does.</p>
+               </div>
+             </div> 
+           </div>
+           <!--Rouge Subclasses-->
+            <div class="row text-center"> 
+             <h3 class="sub-header">Rouge Sub-Classes</h3>
+           </div>
+           <div class="row">  
+             <ul class="sub-class-list list-unstyled col-xs-12 col-sm-12 col-md-12">
+               <li id="criminal" data-target="criminal-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 text-center hover">
+                 <span class="glyphicon glyphicon-certificate text-center col-xs-12"></span>
+                 <h3 class="text-center">Criminal</h3>
+                 <p>Blood doesn't scare you off but gold will make you do a great many things.</p>
+               </li>
+               <li id="assassin" data-target="assassin-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 text-center hover">
+                 <span class="glyphicon glyphicon-link text-center col-xs-12"></span>
+                 <h3 class="text-center">Assassin</h3>
+                 <p>You creep from the shadows, making your kill without ever being seen.</p>
+               </li>
+               <li id="silver-tongue" data-target="silver-tongue-info" class="sub-class col-xs-4 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-4 text-center hover">
+                 <span class="glyphicon glyphicon-bishop text-center col-xs-12"></span>
+                 <h3 class="text-center">Silver Tongue</h3>
+                 <p>Why spill blood when you can get someone else to do it for you?</p>
+               </li>
+             </ul>
+           </div>
+           <!--Criminal -->
+           <div id="criminal-info" class="sub-class-info">
+            <div class="row text-center"> 
+             <h3>Criminal Sub-Class</h3>
+           </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Criminal Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> +0</p>
+                     <p><b>Dexterity</b> +1</p>
+                     <p><b>Intelligence</b> -1</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> -1</p>
+                     <p><b>Constitution</b> +2</p>
+                     <p><b>Charisma</b> -2</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Criminal Background</h4>
+                   <p>You've made your way in life with the gold of others. You will lie, cheat, steal, and murder your way to the top. Because of this, your reputation often proceeds you in certain circles and you always have friends, or enemies, willing to provide information.</p>
+                 </div>
+               </div>  
+             </div>
+             <div class="spacer">  </div>
+           </div>
+           <!--Assassin-->
+           <div id="assassin-info" class="sub-class-info">
+             <div class="row text-center"> 
+               <h3>Assassin Sub-Class</h3>
+             </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Assassin Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> +2</p>
+                     <p><b>Dexterity</b> +1</p>
+                     <p><b>Intelligence</b> +1</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> -0</p>
+                     <p><b>Constitution</b> -1</p>
+                     <p><b>Charisma</b> -2</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Assassin Background</h4>
+                   <p>As a child you were taken in to a private cult and trained in the art of stealth and subterfuge. You live in the shadows, blade ready to find your enemies weakest point and bleed them dry. But if the situation doesn't call for blood, poison in the wine does nicely too.</p>
+                 </div>
+               </div>  
+             </div>
+             <div class="spacer">  </div>
+           </div>
+           <!--Silver Tongue-->
+           <div id="silver-tongue-info" class="sub-class-info">
+             <div class="row text-center"> 
+               <h3>Silver-Tongue Sub-Class</h3>
+             </div>
+             <div class="row rowBackground">
+               <div  class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="class-stats col-xs-12 col-sm-4 col-md-4">
+                   <h4 class="text-center">Silver Tongue Stats Modifier</h4>
+                   <div class="col-xs-6">
+                     <p><b>Strength</b> -2</p>
+                     <p><b>Dexterity</b> -1</p>
+                     <p><b>Intelligence</b> +2</p>
+                   </div>
+                   <div class="col-xs-6">
+                     <p><b>Wisdom</b> +1</p>
+                     <p><b>Constitution</b> -2</p>
+                     <p><b>Charisma</b> +3</p>
+                   </div>
+                 </div>
+                 <div class="sub-col-xs-12 col-sm-8 col-md-8">
+                   <h4>Silver Tongue Background</h4>
+                   <p>You had a knack for getting people to do what you want with nothing but words. Whether it be nudging them into something you both already wanted, or lying directly to their face, you somehow always got your way.</p>
+                 </div>
+               </div> 
+             </div>
+             <div class="spacer">  </div> 
+              <!-- End of Silver-tongue -->
+           </div>
+         </div>
+         <div class="row col-xs-12 text-center">
+           <a href="#home"><button type="button" class="btn"> <span class="glyphicon glyphicon-chevron-up text-center col-xs-12 top"></span> <br> Top </button></a>
+         </div>
+       </div>
+     </div>
+     
+
+
+
+     <div class="container-fluid">
+       <div class="background-color">
+         <div class="row">
+           
+         </div>
+       </div>
+     </div>
+
+
+
+
+
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+     <!-- Latest compiled JavaScript for Bootstrap -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+     <!--Project jQuery -->
+     <script type="text/javascript" src="class_select.js"></script>
+ 
+   </body>
+
+ </html>
