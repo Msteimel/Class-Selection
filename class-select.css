@@ -1,0 +1,220 @@
+*{
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+  background-color: grey;
+}
+
+.spacer {
+	content: '';
+	margin: 25px auto;
+}
+
+h1 {
+	animation: colorChange;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	font-size: 10rem;
+}
+
+@keyframes colorChange {
+	0%,12% { 
+		color: hsla(0, 94%, 55%, 1);  
+		text-shadow: 5px 5px 15px black;
+	    }
+	50% { 
+		 color: hsla(210, 70%, 50%, 1); 
+		 text-shadow: 0px 5px 15px black;
+		 }
+	100% { 
+		color: green;
+		text-shadow: -5px 5px 15px black;
+	    }
+}
+
+span.glyphicon{
+	font-size: 10rem;
+	margin: 5% auto;
+}
+
+.top.glyphicon{
+font-size: 1rem;
+}
+
+
+.hover {
+ 	-webkit-transition: transform 1s;
+ 	-moz-transition: transform 1s;
+ 	-o-transition: transform 1s;
+    transition: transform 1s;
+ }
+
+.hover:hover {
+	transform: translateY(-20px);
+	background-color: grey;
+}
+
+.active {
+	top: -20px;
+	background-color: black;
+}
+
+
+h2 {
+	margin-bottom: 5%;
+	margin-top: 0%;
+	font-size: 5rem;
+}
+
+#fighter-info, #wizard-info,
+#rouge-info, .class-info, .sub-class-info, 
+.criminal-info, .assassin-info, .silver-tongue-info,
+.elemental-info, .death-wizard-info, .cleric-info,
+.berserker-info, .tortuga-info, .ranger-info {
+	display: none;
+}
+
+
+.class, .sub-class {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	cursor: pointer;
+}
+
+
+.sub-header {
+	margin: 3% auto 2% auto;
+	font-size: 3rem;
+}
+
+.rowBackground {
+	background-color: lightgrey;
+	width: 95%;
+	margin: auto;
+	border: 1px solid black;
+}
+
+#fighter-info {
+	padding-top: 5%;
+	background-color: hsla(0, 94%, 55%, 1);
+	border: 1px solid black;
+}
+
+#wizard-info {
+	padding-top: 5%;
+	background-color: hsla(210, 70%, 50%, 1);
+	border: 1px solid black;
+}
+
+#rouge-info {
+	padding-top: 5%;
+	background-color: green;
+	border: 1px solid black;
+}
+
+.sub-class {
+	margin-bottom: 5%;
+}
+
+/*Fighter Class background Hover Color*/
+
+#fighter.hover:hover, #fighter.active {
+	background-color: hsla(0, 72%, 53%, 1);
+	border: 1px solid black;
+}
+
+#berserker.hover:hover, #berserker.active, #berserker-info {
+	background-color: hsla(11, 100%, 44%, 1);
+	border: 1px solid black;
+}
+
+#tortuga.hover:hover, #tortuga.active, #tortuga-info {
+	background-color: hsla(6, 100%, 41%, 1);
+	border: 1px solid black;
+}
+
+#ranger.hover:hover, #ranger.active, #ranger-info {
+	background-color: hsla(348, 100%, 39%, 1);
+	border: 1px solid black;
+}
+
+/*Wizard Class background Hover Color*/
+
+#wizard.hover:hover, #wizard.active {
+	background-color: hsla(210, 70%, 50%, 1);
+	border: 1px solid black;
+}
+
+#elemental.hover:hover, #elemental.active, #elemental-info{
+	background-color: hsla(226, 70%, 50%, 1);
+	border: 1px solid black;
+}
+
+#death-wizard.hover:hover, #death-wizard.active, #death-wizard-info {
+	background-color: hsla(202, 70%, 50%, 1);
+	border: 1px solid black;
+}
+
+#cleric.hover:hover, #cleric.active, #cleric-info {
+	background-color: hsla(192, 70%, 50%, 1);
+	border: 1px solid black;
+}
+/*Rouge Class background Hover Color*/
+
+#rouge.hover:hover, #rouge.active {
+	background-color: green;
+	border: 1px solid black;
+}
+
+#criminal.hover:hover, #criminal.active, #criminal-info {
+	background-color: hsla(96, 100%, 33%, 1);
+	border: 1px solid black;
+}
+
+#assassin.hover:hover, #assassin.active, #assassin-info {
+	background-color: hsla(132, 100%, 33%, 1);
+	border: 1px solid black;
+}
+
+#silver-tongue.hover:hover, #silver-tongue.active, #silver-tongue-info {
+	background-color: hsla(144, 100%, 33%, 1);
+	border: 1px solid black;
+}
+
+button {
+	margin: 5% auto;
+}
+
+@media only screen and (max-width: 996px) {
+   .jumbotron h1 {
+	font-size: 8rem;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+  .jumbotron h1 {
+	font-size: 6rem;
+   }
+
+   span.glyphicon{
+	font-size: 6rem;
+	margin-top: 10%;
+}
+
+  .class p, .sub-class p{
+  	display: none;
+  }
+
+  .sub-header {
+	margin-bottom: 6.5%;
+  }
+
+
+
+}
